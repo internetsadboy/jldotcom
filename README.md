@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# jl dot com
+v1 Jan 4, 2025 
 
 ## Available Scripts
 
