@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div>
       <h1 className="text-4xl" style={{
-        lineHeight: '5rem',        
+        lineHeight: '5rem',
       }}
       >
         ABOUT
@@ -16,7 +16,7 @@ const About = () => {
         <img
           height="120"
           width="120"
-          src="/img/about/passport.png"
+          src={`${process.env.PUBLIC_URL}/img/about/passport.png`}
           style={{
             marginBottom: 20,
           }}
@@ -53,7 +53,7 @@ const About = () => {
       {showResume && (
         <img
           id="resume"
-          src="/img/about/resume_jl_2024.jpg"
+          src={`${process.env.PUBLIC_URL}/img/about/resume_jl_2024.jpg`}
           alt="Resume not found"
           style={{ maxWidth: "100%", marginTop: 0 }}
         />

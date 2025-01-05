@@ -7,7 +7,7 @@ const Photo = () => {
 
   useEffect(() => {
    // Fetch the image paths from the JSON file
-   fetch('/img/photo/photos.json')
+   fetch(`${process.env.PUBLIC_URL}/img/photo/photos.json`)
      .then((response) => response.json())
      .then((data) => setPhotos(data.photos));
    }, []);
@@ -20,7 +20,7 @@ const Photo = () => {
           <div className="photo">
             <LazyLoadImage
               key={index}
-              src={`/img/photo/${src}`}
+              src={`${process.env.PUBLIC_URL}/img/photo/${src}`}
               alt={`Image ${index + 1}`}
             />
           </div>
