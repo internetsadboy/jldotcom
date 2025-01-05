@@ -2,7 +2,7 @@
   "name": "jldotcom",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://internetsadboy.github.io/jldotcom"
+  "homepage": "https://internetsadboy.github.io/jldotcom",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
