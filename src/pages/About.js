@@ -34,30 +34,29 @@ const About = () => {
       <h2>MGTS.</h2>
 
       {/* Toggle Resume */}
-      <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault(); // Prevent default anchor behavior
-          setShowResume((prev) => !prev); // Toggle state
-        }}
-        style={{
-          display: "block",
-          marginTop: 20,
-          fontWeight: "bold",
-        }}
-      >
-        {showResume ? "Hide Resume" : "Show Resume"}
-      </a>
+      <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <a
+          id="link-show-resume"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            setShowResume((prev) => !prev); // Toggle state
+          }}
+        >
+          {showResume ? "Hide Resume" : "Show Resume"}
+        </a>
 
-      {/* Conditionally Render Resume */}
-      {showResume && (
-        <img
-          id="resume"
-          src={`${process.env.PUBLIC_URL}/img/about/resume_jl_2024.jpg`}
-          alt="Resume not found"
-          style={{ maxWidth: "100%", marginTop: 0 }}
-        />
-      )}
+        {/* Conditionally Render Resume */}
+        {showResume && (
+          <img
+            id="resume"
+            src={`${process.env.PUBLIC_URL}/img/about/resume_jl_2024.jpg`}
+            alt="Resume not found"
+            style={{ maxWidth: "100%", marginTop: 0 }}
+          />
+        )}
+      </div>
+
     </div>
   )
 }

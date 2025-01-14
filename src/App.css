@@ -40,6 +40,19 @@ main {
   font-weight: bold;
 }
 
+#link-show-resume {
+  display: block;
+  max-width: 150px;
+  font-weight: bold;
+  border: 1px solid black;
+  background: black;
+  color: yellow;
+  padding: 3px 14px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+
 @media only screen and (max-width: 768px) {
   main {
     padding: 1.5rem;
