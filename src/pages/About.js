@@ -23,15 +23,16 @@ const About = () => {
         />
       </div>
 
-      <h2>Foccacia handler.</h2>
+      <h2>Foccacia Handler.</h2>
       <h2>Deckhand.</h2>
-      <h2>Pasta Shop.</h2>
-      <h2>Fine-dining server.</h2>
-      <h2>Cellar worker.</h2>
-      <h2>Closet coder.</h2>
+      <h2>Cashier.</h2>
+      <h2>Server.</h2>
+      <h2>Cellar Worker.</h2>
+      <h2>Coder.</h2>
       <h2>Filmmaker.</h2>
       <h2>Photographer.</h2>
-      <h2>MGTS.</h2>
+      <h2>Part-time Uber Driver.</h2>
+      <h2>MGTS548.</h2>
 
       {/* Toggle Resume */}
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
