@@ -1,6 +1,6 @@
 import React from "react";
 
-const Code = () => {
+const Code = ({ isMobile }) => {
   return (
     <div className="tracking-wider">
       <h1 className="text-4xl" style={{lineHeight: '5rem', marginBottom: 20}}>CODE</h1>

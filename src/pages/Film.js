@@ -1,6 +1,6 @@
 import React from "react";
 
-const Film = () => {
+const Film = ({ isMobile }) => {
   return (
     <div id="film-container" className="">
       <h1 className="text-4xl" style={{lineHeight: '5rem', marginBottom: 20}}>FILM + DOC</h1>

@@ -2,15 +2,16 @@ import React, {useEffect, useState} from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
-const Photo = () => {
-  const [photos, setPhotos] = useState([])
+const Photo = ({ isMobile }) => {
+  const [photos, setPhotos] = useState([]);
+  const imgDevicePath = isMobile ? `/img/mobile/` : `/img/desktop/`
 
   useEffect(() => {
-   // Fetch the image paths from the JSON file
-   fetch(`${process.env.PUBLIC_URL}/img/photo/photos.json`)
+   // Fetch the image filenames from the JSON
+   fetch(`${process.env.PUBLIC_URL}/img/desktop/photo/photos.json`)
      .then((response) => response.json())
      .then((data) => setPhotos(data.photos));
-   }, []);
+  }, []);
 
   return (
     <div>
@@ -20,7 +21,7 @@ const Photo = () => {
           <div className="photo">
             <LazyLoadImage
               key={index}
-              src={`${process.env.PUBLIC_URL}/img/photo/${src}`}
+              src={`${process.env.PUBLIC_URL}${imgDevicePath}photo/${src}`}
               alt={`Image ${index + 1}`}
             />
           </div>

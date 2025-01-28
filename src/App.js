@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,35 +12,36 @@ import "./App.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("HOME");
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  const renderPage = () => {
+  const renderPage = (isMobile) => {
     switch (currentPage) {
       case "HOME":
-        return <Home />;
+        return <Home isMobile={isMobile} />;
       case "ABOUT":
-        return <About />;
+        return <About isMobile={isMobile} />;
       case "PHOTO":
-        return <Photo />;
+        return <Photo isMobile={isMobile} />;
       case "CODE":
-        return <Code />;
+        return <Code isMobile={isMobile} />;
       case "FILM":
-        return <Film />;
+        return <Film isMobile={isMobile} />;
       default:
-        return <Home />;
+        return <Home isMobile={isMobile} />;
     }
   };
 
   return (
     <div>
       {/* Pass state and setter function to NavBar */}
-      <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <NavBar isMobile={isMobile} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <main style={{
         marginTop: 40,
         margin: 'auto',
         textAlign: 'center',
         display: 'flex',
         justifyContent:'center'}}>
-        {renderPage()}
+        {renderPage(isMobile)}
       </main>
     </div>
   );

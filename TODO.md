@@ -1,10 +1,16 @@
 # TODO LIST
 
 ### BACKLOG
+#### Functional
 1. Create small copies of images for mobile devices
 2. Email button (**craigslist style**)
     * direct gmail link
     * copy to clipboard option
-3. about page "spotify playlist"
-4. Click on image => full screen view (x out top left)
-5. Add basic 3rd party traffic analytics
+3. Find optimal desktop image size and update
+4. Fix Film Pg styling issue for text overflow on mobile
+5. convert app from SPA to MPA
+
+#### Nice to have
+1. About page "spotify playlist"
+2. Click on image => full screen view (x out top left)
+3. Add basic 3rd party traffic analytics

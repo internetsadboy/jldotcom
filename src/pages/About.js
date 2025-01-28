@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 
-const About = () => {
+const About = ({ isMobile }) => {
   const [showResume, setShowResume] = useState(false);
+  const imgDevicePath = isMobile ? `/img/mobile/` : `/img/desktop/`;
 
   return (
     <div>
@@ -16,7 +17,7 @@ const About = () => {
         <img
           height="120"
           width="120"
-          src={`${process.env.PUBLIC_URL}/img/about/passport.png`}
+          src={`${process.env.PUBLIC_URL}/img/desktop/about/passport.png`}
           style={{
             marginBottom: 20,
           }}
@@ -31,7 +32,7 @@ const About = () => {
       <h2>Coder.</h2>
       <h2>Filmmaker.</h2>
       <h2>Photographer.</h2>
-      <h2>Part-time Uber Driver.</h2>
+      <h2>Part-time Uber Driver .</h2>
       <h2>MGTS548.</h2>
 
       {/* Toggle Resume */}
@@ -51,7 +52,7 @@ const About = () => {
         {showResume && (
           <img
             id="resume"
-            src={`${process.env.PUBLIC_URL}/img/about/resume_jl_2024.jpg`}
+            src={`${process.env.PUBLIC_URL}${imgDevicePath}about/resume_jl_2024.jpg`}
             alt="Resume not found"
             style={{ maxWidth: "100%", marginTop: 0 }}
           />

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./NavBar.mobile.css";
 
-const NavBar = ({ currentPage, setCurrentPage }) => {
+const NavBar = ({ isMobile, currentPage, setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Toggle menu visibility
   const pages = ["ABOUT", "CODE", "PHOTO", "FILM"];
-
+  
   const toggleMenu = () => {
     console.log('toggling menu')
     setIsMenuOpen(!isMenuOpen);
